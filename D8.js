@@ -40,13 +40,23 @@ changePcontent();
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-const changeUrls = function () {};
+/* const changeUrls = function () {
+  const ChangeA = document.getElementsByClassName("perlink");
+  ChangeA.setAttribute("href", "https://www.google.com"); //Uncaught TypeError: ChangeA.setAttribute is not a function
+};
+changeUrls(); */
 
 /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-const addToTheSecond = function () {};
+const addToTheSecond = function () {
+  const NuovoElemento = document.createElement("li");
+  NuovoElemento.innerText = "Sono un uovo elemento della lista";
+  const padre = document.getElementById("secondList");
+  padre.appendChild(NuovoElemento);
+};
+addToTheSecond();
 
 /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un secondo paragrafo al primo div
