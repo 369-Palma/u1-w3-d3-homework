@@ -29,9 +29,8 @@ addClassToTitle();
 
 const changePcontent = function () {
   const p = document.querySelectorAll("div p");
-  console.log(p);
   p.forEach((p) => {
-    p.innerText = "testo del paragrafo del documento";
+    p.innerHTML = "testo del paragrafo del documento";
   });
 };
 changePcontent();
