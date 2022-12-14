@@ -4,7 +4,7 @@
 
 const changeTitle = function () {
   const NewTitle = document.querySelector("h1");
-  title.innerText = "Accappatoio";
+  NewTitle.innerText = "Accappatoio";
 };
 
 changeTitle();
@@ -13,19 +13,28 @@ changeTitle();
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
 
-/*  const addClassToTitle = function () {
-        const NewClass = document.getElementsByTagName("h1");
-        title.classList.add(".myHeading");
-        console.log(NewClass);
-      };
+const addClassToTitle = function () {
+  const NewClass = document.querySelector("h1");
+  NewClass.classList.add("myHeading");
+  //NewClass.setAttribute("class", "newClass");
+  /* NewClass.classList.add("myHeading"); */
+  console.log(NewClass);
+};
 
-      addClassToTitle();
- */
+addClassToTitle();
+
 /* ESERCIZIO 3
        Scrivi una funzione per che cambi il testo dei p figli di un div
       */
 
-const changePcontent = function () {};
+const changePcontent = function () {
+  const p = document.querySelectorAll("div p");
+  console.log(p);
+  p.forEach((p) => {
+    p.innerText = "testo del paragrafo del documento";
+  });
+};
+changePcontent();
 
 /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
